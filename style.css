@@ -12,11 +12,14 @@ body{
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    column-gap: 30px;
   }
 
   .news-wrapper {
     width: 65%;
-    padding: 0px 30px 0px 0px;
+
   }
 
 /* dėti baltą spalvą ne tik ant info konteinerio, geriau ant  konteinerio, apgaubiančio ir foto ir info. */
@@ -25,10 +28,11 @@ body{
 
  .main-news {
     display: flex;
-    width: 100%; }
+    width: 100%; 
+  height: 50%;
+column-gap: 30px;}
 
     .new {
-    padding: 0px 15px;
     margin-bottom: 30px;
     width: 50%;
     }
@@ -36,10 +40,9 @@ body{
    .main-news-info {
     border: none;
     padding: 38px;
-    background-color: white;
     width: 100%;
     display: block;
-    height: 200px;
+  
     
 }
 
@@ -69,6 +72,11 @@ object-fit: cover;
 display: block;
 height: 200px;
 }
+.new a {
+  height: 100%;
+  display: block;
+  background-color: white;
+}
 
 .new a,
 .additional-new a {
@@ -86,11 +94,11 @@ height: 200px;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    column-gap: 30px;
 }
 .additional-new {
     height: 50%;
-    width: 50%;
-    padding: 0px 15px;
+    width: calc((100% - 30px) / 2);
     margin-bottom: 30px;
 }
 
@@ -251,11 +259,73 @@ color: white;
 
 .audio-container button {
 cursor:pointer;
+
 }
 
 .event {
     margin-bottom:20px;
 }
+
+
+@media screen and (max-width: 919px) {
+  .hero-box {
+   flex-direction: column;
+   padding-left: 20px;
+   padding-right: 20px;
+  }
+  .news-wrapper
+   { width: 100%;
+    padding-right: 0;
+  }
+  .videos-wrapper iframe {
+    width: 100%;
+    height: 500px;
+  }
+  .podcasts-wrapper {
+    width: 100%;
+}
+.audio-container {
+  height: 100px;
+  justify-content: space-between;
+}
+.audio-container button {
+  width: 98px;
+}
+.audio-container img {
+  width: auto;
+}
+}
+
+
+@media screen and (max-width: 750px) {
+  .news-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-news {
+    flex-direction: column;
+  }
+
+  .new {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .additional-new {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .videos-wrapper iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+
+
+
 
 
 
