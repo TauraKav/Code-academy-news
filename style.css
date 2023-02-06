@@ -3,331 +3,235 @@
 *::after {
   box-sizing: border-box;
 }
-body{
-    background-color: rgb(237, 229, 229);
+
+body {
+  background-color: rgb(237, 229, 229);
 }
 
 .hero-box {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
-    column-gap: 30px;
-  }
-
-  .news-wrapper {
-    width: 65%;
-
-  }
-
-/* dėti baltą spalvą ne tik ant info konteinerio, geriau ant  konteinerio, apgaubiančio ir foto ir info. */
-
-/* gap dėti ant tėvinio elemnto, ten kur dedam display:flex */
-
- .main-news {
-    display: flex;
-    width: 100%; 
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.hero-box .news-wrapper {
+  width: 65%;
+}
+.hero-box .news-wrapper .main-news {
+  display: flex;
+  width: 100%;
   height: 50%;
-column-gap: 30px;}
-
-    .new {
-    margin-bottom: 30px;
-    width: 50%;
-    }
-
-   .main-news-info {
-    border: none;
-    padding: 38px;
-    width: 100%;
-    display: block;
-  
-    
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
-
-.info-title {
-    text-transform: uppercase;
-    color: rgb(39, 39, 204);
-    margin: 0px 0px 13px 0px;
-    font-size: x-small;
-    
+.hero-box .news-wrapper .main-news .new {
+  margin-bottom: 30px;
+  width: 50%;
 }
-
-.info-description {
-    font-size: larger;
-    margin: 0px 0px 11px 0px;
-    color: black;
-}
-
-.info-date {
-    color: rgb(30, 29, 29);
-    font-size: smaller;
-    margin: 10px 0px 0px;
-}
-
-.new a img{
-    width: 100%;
-object-fit: cover;
-display: block;
-height: 200px;
-}
-.new a {
+.hero-box .news-wrapper .main-news .new a {
   height: 100%;
   display: block;
   background-color: white;
+  text-decoration: none;
 }
-
-.new a,
-.additional-new a {
-    text-decoration: none;
+.hero-box .news-wrapper .main-news .new a img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  height: 200px;
 }
-.additional-new a {
-    display: flex;
+.hero-box .news-wrapper .main-news .new a .main-news-info {
+  border: none;
+  padding: 38px;
+  width: 100%;
+  display: block;
 }
-
-.additional-news-description {
-    color: black;
+.hero-box .news-wrapper .main-news .new a .main-news-info .info-title {
+  text-transform: uppercase;
+  color: rgb(39, 39, 204);
+  margin: 0px 0px 13px 0px;
+  font-size: x-small;
 }
-
-.additional-news-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    column-gap: 30px;
+.hero-box .news-wrapper .main-news .new a .main-news-info .info-description {
+  font-size: larger;
+  margin: 0px 0px 11px 0px;
+  color: black;
 }
-.additional-new {
-    height: 50%;
-    width: calc((100% - 30px) / 2);
-    margin-bottom: 30px;
+.hero-box .news-wrapper .main-news .new a .main-news-info .info-date {
+  color: rgb(30, 29, 29);
+  font-size: smaller;
+  margin: 10px 0px 0px;
 }
-
-.additional-new img {
-    width:30%;
-    height: 60px;
-    object-fit: cover;
+.hero-box .news-wrapper .additional-news-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
-
-/* ant paveikslėlio reikia užsidėti div wrapper ir tada nustatyti plotį */
-
-.additional-new-info {
-    padding-left: 20px;
-    width: 70%;
+.hero-box .news-wrapper .additional-news-wrapper .additional-new {
+  height: 50%;
+  width: calc((100% - 30px) / 2);
+  margin-bottom: 30px;
 }
-
-p.additional-news-description  {
-    margin: 0px 0px 11px;
-
+.hero-box .news-wrapper .additional-news-wrapper .additional-new a {
+  text-decoration: none;
+  display: flex;
 }
-.news-link {
-    text-decoration: none;
-    color: black;
-    font-size: larger;
-    font-weight: 500;
-    font-weight: bolder;
-    background-color: white;
-    width: 100%;
-    display: inline-block;
-    padding: 33px 60px 33px 40px;
-    border-radius: 10px;
+.hero-box .news-wrapper .additional-news-wrapper .additional-new a img {
+  width: 30%;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
-.videos-wrapper {
-    width: 100%;
+.hero-box .news-wrapper .additional-news-wrapper .additional-new a .additional-new-info {
+  padding-left: 20px;
+  width: 70%;
 }
-
-.videos-title {
-    margin:40px 0px 25px 0px;
+.hero-box .news-wrapper .additional-news-wrapper .additional-new a .additional-new-info .additional-news-description {
+  color: black;
 }
-
-.videos-title-2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.hero-box .news-wrapper .additional-news-wrapper .additional-new a .additional-new-info .additional-news-description {
+  margin: 0px 0px 11px;
 }
-
-.podcasts-wrapper {
-    width: 35%;
+.hero-box .news-wrapper .news-link {
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  font-weight: 500;
+  font-weight: bolder;
+  background-color: white;
+  width: 100%;
+  display: inline-block;
+  padding: 33px 60px 33px 40px;
+  border-radius: 10px;
 }
-
-.audio-container {
-    height: calc(25% / 3 * 2);
-    width: 100%;
-    border-style: solid;
-    border-width: 1px;
-    background-color: black;
-    display: flex;
-    
+.hero-box .news-wrapper .videos-wrapper {
+  width: 100%;
 }
-
-.audio-container img
- {
-    width: 20%;
-    object-fit: cover;
-
+.hero-box .news-wrapper .videos-wrapper iframe {
+  width: 100%;
 }
-
-.audio-container button {
-    width: 20%;
-    min-height: 100%; }
-    
-.audio-container button img {
-   width: 30px;
-    object-fit: cover;
+.hero-box .news-wrapper .videos-wrapper .videos-title {
+  margin: 40px 0px 25px 0px;
 }
-
-span.time{
-    color: rgb(149, 151, 151);
-    text-align: center;
-    align-self: center;
-    width: 60%;
+.hero-box .news-wrapper .videos-wrapper .videos-title-2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-
-.audio-info {
-    padding: 17px 20px;
-
+.hero-box .podcasts-wrapper {
+  width: 35%;
 }
-.audio-description {
-    font-size: smaller;
-    margin: 0px 0px 11px;
-    
+.hero-box .podcasts-wrapper .podcast {
+  background-color: white;
+  margin-bottom: 25px;
 }
-.podcast {
-    background-color: white;
-    margin-bottom: 25px;
+.hero-box .podcasts-wrapper .podcast .audio-container {
+  height: 16.6666666667%;
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  background-color: black;
+  display: flex;
 }
-
-.event a {
-    text-decoration: none;
-    position:relative;
-  }
-
-
-.event a .event-date .event-day {
-    padding: 9px 4px 10px;
-    background-color: white;
-    text-align: center;
-    font-weight: bold;
-   
-
+.hero-box .podcasts-wrapper .podcast .audio-container img {
+  width: 20%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.event a .event-date .event-month {
-   background-color: rgb(193, 10, 168); 
-   text-align: center;
-   color: white;
-   text-transform: uppercase;
-   font-size: smaller;
-
-
+.hero-box .podcasts-wrapper .podcast .audio-container .time {
+  color: rgb(149, 151, 151);
+  text-align: center;
+  align-self: center;
+  width: 60%;
 }
-.event a .event-date {
-   max-width: 60px;
-   color: black;
-   border-radius: 8px;
-   text-align: center;
-   background-color: white;
-   overflow: hidden;
-   position:absolute;
-   top:60px;
-   left: 40px;
+.hero-box .podcasts-wrapper .podcast .audio-container button {
+  width: 20%;
+  min-height: 100%;
+  cursor: pointer;
 }
-
-
-.event a img {
-    display: block;
-    width: 100%;
-    min-height: 300px;
-    object-fit: cover;
+.hero-box .podcasts-wrapper .podcast .audio-container button img {
+  width: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
- .event-description {
-background-color: black;
-width: 100%;
-padding: 50px 20px 20px;
-color: white;
+.hero-box .podcasts-wrapper .podcast .audio-info {
+  padding: 17px 20px;
 }
-
-.location {
-    text-transform: uppercase;
-    font-size: smaller;
-    font-weight: lighter;
-    margin-bottom: 3px;
+.hero-box .podcasts-wrapper .podcast .audio-info .audio-description {
+  font-size: smaller;
+  margin: 0px 0px 11px;
 }
-
-.event-name {
-    margin: 0px;
+.hero-box .podcasts-wrapper .events-wrapper .event {
+  margin-bottom: 20px;
 }
-
-.audio-container button {
-cursor:pointer;
-
+.hero-box .podcasts-wrapper .events-wrapper .event a {
+  text-decoration: none;
+  position: relative;
 }
-
-.event {
-    margin-bottom:20px;
+.hero-box .podcasts-wrapper .events-wrapper .event a img {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
-
-@media screen and (max-width: 919px) {
-  .hero-box {
-   flex-direction: column;
-   padding-left: 20px;
-   padding-right: 20px;
-  }
-  .news-wrapper
-   { width: 100%;
-    padding-right: 0;
-  }
-  .videos-wrapper iframe {
-    width: 100%;
-    height: 500px;
-  }
-  .podcasts-wrapper {
-    width: 100%;
+.hero-box .podcasts-wrapper .events-wrapper .event a .event-date {
+  max-width: 60px;
+  color: black;
+  border-radius: 8px;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  position: absolute;
+  top: 60px;
+  left: 40px;
 }
-.audio-container {
-  height: 100px;
-  justify-content: space-between;
+.hero-box .podcasts-wrapper .events-wrapper .event a .event-date .event-day {
+  padding: 9px 4px 10px;
+  background-color: white;
+  text-align: center;
+  font-weight: bold;
 }
-.audio-container button {
-  width: 98px;
+.hero-box .podcasts-wrapper .events-wrapper .event a .event-date .event-month {
+  background-color: rgb(193, 10, 168);
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: smaller;
 }
-.audio-container img {
-  width: auto;
+.hero-box .podcasts-wrapper .events-wrapper .event a .event-description {
+  background-color: black;
+  width: 100%;
+  padding: 50px 20px 20px;
+  color: white;
 }
+.hero-box .podcasts-wrapper .events-wrapper .event a .event-description .location {
+  text-transform: uppercase;
+  font-size: smaller;
+  font-weight: lighter;
+  margin-bottom: 3px;
 }
-
-
-@media screen and (max-width: 750px) {
-  .news-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .main-news {
-    flex-direction: column;
-  }
-
-  .new {
-    width: 100%;
-    padding-left: 0;
-  }
-
-  .additional-new {
-    width: 100%;
-    padding-left: 0;
-  }
-
-  .videos-wrapper iframe {
-    width: 100%;
-    height: 300px;
-  }
+.hero-box .podcasts-wrapper .events-wrapper .event a .event-description .event-name {
+  margin: 0px;
 }
-
-
-
-
-
-
+.hero-box .podcasts-wrapper .events-wrapper .news-link {
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  font-weight: 500;
+  font-weight: bolder;
+  background-color: white;
+  width: 100%;
+  display: inline-block;
+  padding: 33px 60px 33px 40px;
+  border-radius: 10px;
+}
 
 /* 
 
@@ -505,4 +409,4 @@ cursor:pointer;
   .event .event-info .event-title {
     margin: 0;
     font-size: 24px;
-  } */
+  } *//*# sourceMappingURL=style.css.map */

@@ -1,0 +1,508 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body{
+    background-color: rgb(237, 229, 229);
+}
+
+.hero-box {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    column-gap: 30px;
+  }
+
+  .news-wrapper {
+    width: 65%;
+
+  }
+
+/* dėti baltą spalvą ne tik ant info konteinerio, geriau ant  konteinerio, apgaubiančio ir foto ir info. */
+
+/* gap dėti ant tėvinio elemnto, ten kur dedam display:flex */
+
+ .main-news {
+    display: flex;
+    width: 100%; 
+  height: 50%;
+column-gap: 30px;}
+
+    .new {
+    margin-bottom: 30px;
+    width: 50%;
+    }
+
+   .main-news-info {
+    border: none;
+    padding: 38px;
+    width: 100%;
+    display: block;
+  
+    
+}
+
+.info-title {
+    text-transform: uppercase;
+    color: rgb(39, 39, 204);
+    margin: 0px 0px 13px 0px;
+    font-size: x-small;
+    
+}
+
+.info-description {
+    font-size: larger;
+    margin: 0px 0px 11px 0px;
+    color: black;
+}
+
+.info-date {
+    color: rgb(30, 29, 29);
+    font-size: smaller;
+    margin: 10px 0px 0px;
+}
+
+.new a img{
+    width: 100%;
+object-fit: cover;
+display: block;
+height: 200px;
+}
+.new a {
+  height: 100%;
+  display: block;
+  background-color: white;
+}
+
+.new a,
+.additional-new a {
+    text-decoration: none;
+}
+.additional-new a {
+    display: flex;
+}
+
+.additional-news-description {
+    color: black;
+}
+
+.additional-news-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 30px;
+}
+.additional-new {
+    height: 50%;
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 30px;
+}
+
+.additional-new img {
+    width:30%;
+    height: 60px;
+    object-fit: cover;
+}
+
+/* ant paveikslėlio reikia užsidėti div wrapper ir tada nustatyti plotį */
+
+.additional-new-info {
+    padding-left: 20px;
+    width: 70%;
+}
+
+p.additional-news-description  {
+    margin: 0px 0px 11px;
+
+}
+.news-link {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: 500;
+    font-weight: bolder;
+    background-color: white;
+    width: 100%;
+    display: inline-block;
+    padding: 33px 60px 33px 40px;
+    border-radius: 10px;
+}
+
+.videos-wrapper {
+    width: 100%;
+}
+
+.videos-title {
+    margin:40px 0px 25px 0px;
+}
+
+.videos-title-2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.podcasts-wrapper {
+    width: 35%;
+}
+
+.audio-container {
+    height: calc(25% / 3 * 2);
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    background-color: black;
+    display: flex;
+    
+}
+
+.audio-container img
+ {
+    width: 20%;
+    object-fit: cover;
+
+}
+
+.audio-container button {
+    width: 20%;
+    min-height: 100%; }
+    
+.audio-container button img {
+   width: 30px;
+    object-fit: cover;
+}
+
+span.time{
+    color: rgb(149, 151, 151);
+    text-align: center;
+    align-self: center;
+    width: 60%;
+}
+
+.audio-info {
+    padding: 17px 20px;
+
+}
+.audio-description {
+    font-size: smaller;
+    margin: 0px 0px 11px;
+    
+}
+.podcast {
+    background-color: white;
+    margin-bottom: 25px;
+}
+
+.event a {
+    text-decoration: none;
+    position:relative;
+  }
+
+
+.event a .event-date .event-day {
+    padding: 9px 4px 10px;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+   
+
+}
+.event a .event-date .event-month {
+   background-color: rgb(193, 10, 168); 
+   text-align: center;
+   color: white;
+   text-transform: uppercase;
+   font-size: smaller;
+
+
+}
+.event a .event-date {
+   max-width: 60px;
+   color: black;
+   border-radius: 8px;
+   text-align: center;
+   background-color: white;
+   overflow: hidden;
+   position:absolute;
+   top:60px;
+   left: 40px;
+}
+
+
+.event a img {
+    display: block;
+    width: 100%;
+    min-height: 300px;
+    object-fit: cover;
+}
+
+ .event-description {
+background-color: black;
+width: 100%;
+padding: 50px 20px 20px;
+color: white;
+}
+
+.location {
+    text-transform: uppercase;
+    font-size: smaller;
+    font-weight: lighter;
+    margin-bottom: 3px;
+}
+
+.event-name {
+    margin: 0px;
+}
+
+.audio-container button {
+cursor:pointer;
+
+}
+
+.event {
+    margin-bottom:20px;
+}
+
+
+@media screen and (max-width: 919px) {
+  .hero-box {
+   flex-direction: column;
+   padding-left: 20px;
+   padding-right: 20px;
+  }
+  .news-wrapper
+   { width: 100%;
+    padding-right: 0;
+  }
+  .videos-wrapper iframe {
+    width: 100%;
+    height: 500px;
+  }
+  .podcasts-wrapper {
+    width: 100%;
+}
+.audio-container {
+  height: 100px;
+  justify-content: space-between;
+}
+.audio-container button {
+  width: 98px;
+}
+.audio-container img {
+  width: auto;
+}
+}
+
+
+@media screen and (max-width: 750px) {
+  .news-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-news {
+    flex-direction: column;
+  }
+
+  .new {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .additional-new {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .videos-wrapper iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+
+
+
+
+
+
+/* 
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #f2f2f2;
+  }
+  .container {
+    max-width: 1230px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  a.button-title {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 30px 40px;
+    display: block;
+    border-radius: 8px;
+    font-size: 30px;
+  }
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .section-title {
+    font-size: 40px;
+  }
+  .sub-title {
+    font-size: 30px;
+  }
+  .news-article {
+    width: 50%;
+  }
+  .news-article a {
+    text-decoration: none;
+    color: black;
+  }
+  .content-wrapper {
+    display: flex;
+    column-gap: 30px;
+  }
+  .main-content {
+    width: 65%;
+  }
+  .sidebar-content {
+    width: 35%;
+  }
+  .main-news {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .main-news .news-article {
+    background-color: white;
+  }
+  .main-news .news-article .image-wrapper {
+    height: 260px;
+  }
+  .main-news .news-article .info-wrapper {
+    padding: 30px;
+  }
+  .main-news .news-article .info-wrapper .article-category {
+    color: #1200ff;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .main-news .news-article .info-wrapper .article-title {
+    font-size: 30px;
+    margin: 13px 0 10px;
+  }
+  .secondary-news {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .secondary-news .news-article {
+    width: calc((100% - 30px) / 2);
+  }
+  .secondary-news .news-article a {
+    display: flex;
+  }
+  .secondary-news .news-article .image-wrapper {
+    width: 120px;
+    height: 80px;
+  }
+  .secondary-news .news-article .info-wrapper {
+    width: calc(100% - 120px);
+    padding-left: 20px;
+  }
+  .secondary-news .news-article .info-wrapper .article-title {
+    margin: 5px 0;
+    font-size: 20px;
+  }
+  .video .video-wrapper {
+    height: 450px;
+  }
+  .podcasts-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .podcast {
+    background-color: white;
+  }
+  .podcast .podcast-control {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+  }
+  .podcast .podcast-control .podcast-image {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+  }
+  .podcast .podcast-control .podcast-play {
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border: 0;
+  }
+  .podcast .podcast-info {
+    padding: 20px;
+  }
+  .podcast .podcast-info .podcast-title {
+    margin: 0 0 8px;
+  }
+  .event {
+    background-color: black;
+    margin-bottom: 30px;
+  }
+  .event a {
+    color: white;
+    text-decoration: none;
+  }
+  .event .event-info {
+    padding: 20px;
+  }
+  .event .event-info .event-date {
+    width: 70px;
+    text-align: center;
+    border-radius: 7px;
+    overflow: hidden;
+  }
+  .event .event-info .event-date .event-day {
+      font-size: 28px;
+      padding: 9px 5px;
+      background-color: white;
+      color: black;
+  }
+  .event .event-info .event-date .event-month {
+    padding: 5px;
+    background-color: #ff00e9;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  .event .event-info .event-location {
+    font-size: 10px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    display: block;
+  }
+  .event .event-info .event-title {
+    margin: 0;
+    font-size: 24px;
+  } */
