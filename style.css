@@ -18,8 +18,27 @@ body {
   -moz-column-gap: 30px;
        column-gap: 30px;
 }
+@media screen and (max-width: 919px) {
+  .hero-box {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 .hero-box .news-wrapper {
   width: 65%;
+}
+@media screen and (max-width: 919px) {
+  .hero-box .news-wrapper {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 749px) {
+  .hero-box .news-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .hero-box .news-wrapper .main-news {
   display: flex;
@@ -28,9 +47,20 @@ body {
   -moz-column-gap: 30px;
        column-gap: 30px;
 }
+@media screen and (max-width: 749px) {
+  .hero-box .news-wrapper .main-news {
+    flex-direction: column;
+  }
+}
 .hero-box .news-wrapper .main-news .new {
   margin-bottom: 30px;
   width: 50%;
+}
+@media screen and (max-width: 749px) {
+  .hero-box .news-wrapper .main-news .new {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 .hero-box .news-wrapper .main-news .new a {
   height: 100%;
@@ -79,6 +109,12 @@ body {
   width: calc((100% - 30px) / 2);
   margin-bottom: 30px;
 }
+@media screen and (max-width: 749px) {
+  .hero-box .news-wrapper .additional-news-wrapper .additional-new {
+    width: 100%;
+    padding-left: 0;
+  }
+}
 .hero-box .news-wrapper .additional-news-wrapper .additional-new a {
   text-decoration: none;
   display: flex;
@@ -117,6 +153,18 @@ body {
 .hero-box .news-wrapper .videos-wrapper iframe {
   width: 100%;
 }
+@media screen and (max-width: 919px) {
+  .hero-box .news-wrapper .videos-wrapper iframe {
+    width: 100%;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .hero-box .news-wrapper .videos-wrapper iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
 .hero-box .news-wrapper .videos-wrapper .videos-title {
   margin: 40px 0px 25px 0px;
 }
@@ -126,6 +174,11 @@ body {
 }
 .hero-box .podcasts-wrapper {
   width: 35%;
+}
+@media screen and (max-width: 919px) {
+  .hero-box .podcasts-wrapper {
+    width: 100%;
+  }
 }
 .hero-box .podcasts-wrapper .podcast {
   background-color: white;
@@ -139,10 +192,21 @@ body {
   background-color: black;
   display: flex;
 }
+@media screen and (max-width: 919px) {
+  .hero-box .podcasts-wrapper .podcast .audio-container {
+    height: 100px;
+    justify-content: space-between;
+  }
+}
 .hero-box .podcasts-wrapper .podcast .audio-container img {
   width: 20%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 919px) {
+  .hero-box .podcasts-wrapper .podcast .audio-container img {
+    width: auto;
+  }
 }
 .hero-box .podcasts-wrapper .podcast .audio-container .time {
   color: rgb(149, 151, 151);
@@ -154,6 +218,11 @@ body {
   width: 20%;
   min-height: 100%;
   cursor: pointer;
+}
+@media screen and (max-width: 919px) {
+  .hero-box .podcasts-wrapper .podcast .audio-container button {
+    width: 98px;
+  }
 }
 .hero-box .podcasts-wrapper .podcast .audio-container button img {
   width: 30px;
@@ -167,60 +236,51 @@ body {
   font-size: smaller;
   margin: 0px 0px 11px;
 }
-.hero-box .podcasts-wrapper .events-wrapper .event {
-  margin-bottom: 20px;
+.hero-box .podcasts-wrapper .event {
+  background-color: black;
+  margin-bottom: 60px;
 }
-.hero-box .podcasts-wrapper .events-wrapper .event a {
+.hero-box .podcasts-wrapper .event a {
+  color: white;
   text-decoration: none;
+}
+.hero-box .podcasts-wrapper .event .event-info {
+  padding: 50px 20px 20px;
   position: relative;
 }
-.hero-box .podcasts-wrapper .events-wrapper .event a img {
-  display: block;
-  width: 100%;
-  min-height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.hero-box .podcasts-wrapper .events-wrapper .event a .event-date {
-  max-width: 60px;
-  color: black;
-  border-radius: 8px;
+.hero-box .podcasts-wrapper .event .event-info .event-date {
+  width: 70px;
   text-align: center;
-  background-color: white;
+  border-radius: 7px;
   overflow: hidden;
   position: absolute;
-  top: 60px;
-  left: 40px;
+  top: -40px;
+  left: 20px;
 }
-.hero-box .podcasts-wrapper .events-wrapper .event a .event-date .event-day {
-  padding: 9px 4px 10px;
+.hero-box .podcasts-wrapper .event .event-info .event-date .event-day {
+  font-size: 28px;
+  padding: 9px 5px;
   background-color: white;
-  text-align: center;
-  font-weight: bold;
+  color: black;
 }
-.hero-box .podcasts-wrapper .events-wrapper .event a .event-date .event-month {
-  background-color: rgb(193, 10, 168);
-  text-align: center;
+.hero-box .podcasts-wrapper .event .event-info .event-date .event-month {
+  padding: 5px;
+  background-color: #ff00e9;
   color: white;
   text-transform: uppercase;
-  font-size: smaller;
+  font-size: 14px;
 }
-.hero-box .podcasts-wrapper .events-wrapper .event a .event-description {
-  background-color: black;
-  width: 100%;
-  padding: 50px 20px 20px;
-  color: white;
-}
-.hero-box .podcasts-wrapper .events-wrapper .event a .event-description .location {
-  text-transform: uppercase;
-  font-size: smaller;
-  font-weight: lighter;
+.hero-box .podcasts-wrapper .event .event-info .event-location {
+  font-size: 10px;
   margin-bottom: 3px;
+  text-transform: uppercase;
+  display: block;
 }
-.hero-box .podcasts-wrapper .events-wrapper .event a .event-description .event-name {
-  margin: 0px;
+.hero-box .podcasts-wrapper .event .event-info .event-title {
+  margin: 0;
+  font-size: 24px;
 }
-.hero-box .podcasts-wrapper .events-wrapper .news-link {
+.hero-box .podcasts-wrapper .news-link {
   text-decoration: none;
   color: black;
   font-size: larger;

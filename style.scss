@@ -1,3 +1,21 @@
+$width-xl:919px;
+$width-md:749px;
+
+
+@mixin xl {
+  @media screen and (max-width: $width-xl){
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: $width-md){
+    @content;
+  }
+}
+
+
+
 *,
 *::before,
 *::after {
@@ -17,8 +35,24 @@ body {
   padding-right: 20px;
   column-gap: 30px;
 
+  @include xl {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .news-wrapper {
     width: 65%;
+
+    @include xl {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    @include md {
+      display: flex;
+      flex-direction: column;
+    }
 
     .main-news {
       display: flex;
@@ -26,9 +60,18 @@ body {
       height: 50%;
       column-gap: 30px;
 
+    @include md {
+        flex-direction: column;
+      }
+
       .new {
         margin-bottom: 30px;
         width: 50%;
+
+       @include md {
+          width: 100%;
+          padding-left: 0;
+        }
 
         a {
           height: 100%;
@@ -84,6 +127,11 @@ body {
         width: calc((100% - 30px) / 2);
         margin-bottom: 30px;
 
+        @include md {
+          width: 100%;
+          padding-left: 0;
+        }
+
         a {
           text-decoration: none;
           display: flex;
@@ -129,6 +177,15 @@ body {
       iframe {
         width: 100%;
 
+        @include xl {
+          width: 100%;
+          height: 500px;
+        }
+
+        @include md {
+          width: 100%;
+          height: 300px;
+        }
       }
 
       .videos-title {
@@ -145,6 +202,10 @@ body {
   .podcasts-wrapper {
     width: 35%;
 
+    @include xl {
+      width: 100%;
+    }
+
     .podcast {
       background-color: white;
       margin-bottom: 25px;
@@ -157,9 +218,18 @@ body {
         background-color: black;
         display: flex;
 
+        @include xl {
+          height: 100px;
+          justify-content: space-between;
+        }
+
         img {
           width: 20%;
           object-fit: cover;
+
+         @include xl {
+            width: auto;
+          }
         }
 
         .time {
@@ -173,6 +243,10 @@ body {
           width: 20%;
           min-height: 100%;
           cursor: pointer;
+
+          @include xl {
+            width: 98px;
+          }
 
           img {
             width: 30px;
@@ -191,69 +265,57 @@ body {
       }
     }
 
-    .events-wrapper {
+    .event {
+      background-color: black;
+      margin-bottom: 60px;
 
-      .event {
-        margin-bottom: 20px;
-
-        a {
-          text-decoration: none;
-          position: relative;
-
-          img {
-            display: block;
-            width: 100%;
-            min-height: 300px;
-            object-fit: cover;
-          }
-
-          .event-date {
-            max-width: 60px;
-            color: black;
-            border-radius: 8px;
-            text-align: center;
-            background-color: white;
-            overflow: hidden;
-            position: absolute;
-            top: 60px;
-            left: 40px;
-
-            .event-day {
-              padding: 9px 4px 10px;
-              background-color: white;
-              text-align: center;
-              font-weight: bold;
-            }
-
-            .event-month {
-              background-color: rgb(193, 10, 168);
-              text-align: center;
-              color: white;
-              text-transform: uppercase;
-              font-size: smaller;
-            }
-          }
-
-          .event-description {
-            background-color: black;
-            width: 100%;
-            padding: 50px 20px 20px;
-            color: white;
-
-            .location {
-              text-transform: uppercase;
-              font-size: smaller;
-              font-weight: lighter;
-              margin-bottom: 3px;
-            }
-
-            .event-name {
-              margin: 0px;
-            }
-          }
-        }
+      a {
+        color: white;
+        text-decoration: none;
       }
 
+      .event-info {
+        padding: 50px 20px 20px;
+        position: relative;
+
+        .event-date {
+          width: 70px;
+          text-align: center;
+          border-radius: 7px;
+          overflow: hidden;
+          position: absolute;
+          top: -40px;
+          left: 20px;
+
+          .event-day {
+            font-size: 28px;
+            padding: 9px 5px;
+            background-color: white;
+            color: black;
+          }
+
+          .event-month {
+            padding: 5px;
+            background-color: #ff00e9;
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+          }
+        }
+
+        .event-location {
+          font-size: 10px;
+          margin-bottom: 3px;
+          text-transform: uppercase;
+          display: block;
+        }
+
+        .event-title {
+          margin: 0;
+          font-size: 24px;
+        }
+      }
+    }
       .news-link {
         text-decoration: none;
         color: black;
@@ -265,80 +327,9 @@ body {
         display: inline-block;
         padding: 33px 60px 33px 40px;
         border-radius: 10px;
-      }
-      
+      } 
     }
   }
-}
-
-
-
-
-
-//  @media screen and (max-width: 919px) {
-//   .hero-box {
-//     flex-direction: column;
-//     padding-left: 20px;
-//     padding-right: 20px;
-//   }
-
-//   .news-wrapper {
-//     width: 100%;
-//     padding-right: 0;
-//   }
-
-//   .videos-wrapper iframe {
-//     width: 100%;
-//     height: 500px;
-//   }
-
-//   .podcasts-wrapper {
-//     width: 100%;
-//   }
-
-//   .audio-container {
-//     height: 100px;
-//     justify-content: space-between;
-//   }
-
-//   .audio-container button {
-//     width: 98px;
-//   }
-
-//   .audio-container img {
-//     width: auto;
-//   }
-// }
-
-
-// @media screen and (max-width: 750px) {
-//   .news-wrapper {
-//     display: flex;
-//     flex-direction: column;
-//   }
-
-//   .main-news {
-//     flex-direction: column;
-//   }
-
-//   .new {
-//     width: 100%;
-//     padding-left: 0;
-//   }
-
-//   .additional-new {
-//     width: 100%;
-//     padding-left: 0;
-//   }
-
-//   .videos-wrapper iframe {
-//     width: 100%;
-//     height: 300px;
-//   }
-// }
-
-
-
 
 
 
